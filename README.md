@@ -4,4 +4,5 @@ included:
 - point translation
 - line translation
 - rectangle translation
-- 
+- triangle rotation
+- line rotation
