@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 
-# Function to translate a line
 def translate_line(P, T):
 
     # Cetak koordinat asli

@@ -1,17 +1,22 @@
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 
-# Function to translate a rectangle
 def translate_rectangle(P, T):
-
     # Cetak koordinat asli
     print("Kotak Awal: ({}, {}) ke ({}, {})".format(P[0][0], P[0][1], P[1][0], P[1][1]))
 
     # Menghitung koordinat baru setelah translasi
-    P_new = [[P[0][0] + T[0], P[0][1] + T[1]], [P[1][0] + T[0], P[1][1] + T[1]]]
+    P_new = [
+        [P[0][0] + T[0], P[0][1] + T[1]],  # Titik kiri bawah baru
+        [P[1][0] + T[0], P[0][1] + T[1]],  # Titik kanan bawah baru
+        [P[1][0] + T[0], P[1][1] + T[1]],  # Titik kanan atas baru
+        [P[0][0] + T[0], P[1][1] + T[1]],  # Titik kiri atas baru
+    ]
 
     # Cetak koordinat setelah translasi
-    print("Kotak Tertranslasi: ({}, {}) ke ({}, {})".format(P_new[0][0], P_new[0][1], P_new[1][0], P_new[1][1]))
+    print("Kotak Tertranslasi:")
+    for point in P_new:
+        print("({:.1f}, {:.1f})".format(point[0], point[1]))
 
     # Plotting using Matplotlib
     plt.style.use('dark_background')
@@ -22,7 +27,7 @@ def translate_rectangle(P, T):
     ax.add_patch(original_rect)
 
     # Plot translated rectangle
-    translated_rect = Rectangle((P_new[0][0], P_new[0][1]), P_new[1][0] - P_new[0][0], P_new[1][1] - P_new[0][1], fill=None, edgecolor='springgreen', linewidth=2, label='Kotak Tertranslasi')
+    translated_rect = Rectangle((P_new[0][0], P_new[0][1]), P_new[1][0] - P_new[0][0], P_new[2][1] - P_new[0][1], fill=None, edgecolor='springgreen', linewidth=2, label='Kotak Tertranslasi')
     ax.add_patch(translated_rect)
 
     # Set axis limits
@@ -41,7 +46,7 @@ def translate_rectangle(P, T):
 
 # Driver function
 if __name__ == "__main__":
-    # Koordinat dari pojok kiri atas dan kanan bawah kotak
+    # Koordinat dari pojok kiri bawah dan kanan atas kotak
     P = [[5, 8], [12, 18]]
     # Faktor translasi
     T = [2, 1]

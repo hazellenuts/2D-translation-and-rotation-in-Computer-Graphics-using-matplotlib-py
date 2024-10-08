@@ -1,8 +1,6 @@
 import matplotlib.pyplot as plt
 
-# Function to translate point
 def translate_point(P, T):
-
     # Cetak koordinat asal
     print("Koordinat Asal: ({}, {})".format(P[0], P[1]))
 
@@ -17,9 +15,6 @@ def translate_point(P, T):
 
 # Main function
 def main():
-    """
-    Fungsi utama untuk menjalankan contoh translasi titik dan memvisualisasikannya.
-    """
 
     # Koordinat asal dari titik
     P = [5, 8]
