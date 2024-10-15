@@ -44,7 +44,6 @@ def translate_rectangle(P, T):
     plt.title('Rectangle Translation', color='white')
     plt.show()
 
-# Driver function
 if __name__ == "__main__":
     # Koordinat dari pojok kiri bawah dan kanan atas kotak
     P = [[5, 8], [12, 18]]

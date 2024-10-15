@@ -1,8 +1,6 @@
 import matplotlib.pyplot as plt
 
 def translate_line(P, T):
-
-    # Cetak koordinat asli
     print("awal: ({}, {}) ke ({}, {})".format(P[0][0], P[0][1], P[1][0], P[1][1]))
 
     # Menghitung koordinat baru setelah translasi

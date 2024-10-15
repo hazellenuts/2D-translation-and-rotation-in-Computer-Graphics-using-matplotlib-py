@@ -13,7 +13,7 @@ def translate_point(P, T):
     # Kembalikan koordinat baru
     return P_new
 
-# Main function
+
 def main():
 
     # Koordinat asal dari titik
@@ -64,6 +64,6 @@ def main():
     # Menampilkan plot
     plt.show()
 
-# Menjalankan fungsi utama
+
 if __name__ == "__main__":
     main()
